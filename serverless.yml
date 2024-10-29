@@ -1,0 +1,26 @@
+service: hello-world-react
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1 # Change if necessary
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: hello
+          method: get
+
+package:
+  exclude:
+    - node_modules/**
+    - .git/**
+    - client/node_modules/**
+
+          
+
+
+
+          
